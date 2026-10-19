@@ -1,0 +1,135 @@
+theme:
+  id: market_share
+  title: market share position
+  classes:
+    gainer: 1
+    loser: -1
+    irrelevant: null
+  body: |
+    WHAT IS MARKET SHARE POSITION?
+
+    Market share position reflects how much of its market a company holds relative to its
+    competitors, and which way that is moving. A company gaining share is winning business its
+    competitors used to have, or growing faster than its market. A company losing share is
+    handing business to competitors, or growing slower than its market.
+
+    Think of it as a question: is this company taking business from its competitors, or giving
+    business away to them?
+
+    GAINER: the excerpt suggests the COMPANY is gaining ground on its competitors. It won share,
+    volume, accounts, contracts, shelf space, or channel priority; win rates improved; customers
+    moved to it from an alternative; it grew faster than its market, moved up in its category, or
+    absorbed volume a rival gave up. The gain is the COMPANY's own, and it is measured against
+    competitors or against the market's growth — not against its own past absolute size.
+
+    LOSER: the excerpt suggests the COMPANY is losing ground to its competitors. It lost share,
+    volume, accounts, contracts, shelf space, or channel priority; win rates deteriorated;
+    customers moved to an alternative; it grew slower than its market, slipped out of the leading
+    position, or withdrew from a market it could no longer compete in.
+
+    IRRELEVANT: the excerpt does not meaningfully speak to the COMPANY's own competitive
+    position. These are the near-misses that specifically do NOT count:
+
+    - Not about the COMPANY's own position: analyst price targets, ratings or stock moves;
+      insider transactions; a different company is the real subject and the COMPANY is only
+      named as customer, competitor, channel or example; earnings-call boilerplate (analyst
+      intros, operator handoffs, greetings); a question that states no fact.
+    - Absolute growth with no competitive reference: revenue, earnings, customer or volume
+      growth not compared to competitors or to the market's own growth. GROWING IS NOT GAINING
+      SHARE.
+    - Total-market or industry statements ("the category grew 8%", "demand is strong") with
+      nothing said about the COMPANY's own slice of it.
+    - Capability, intent, plans, targets or guidance only ("we aim to be number one", "we are
+      investing to win share") with no realized outcome.
+    - Inputs mistaken for outcomes: a new product, plant, hire, partnership or campaign
+      announced with no stated competitive result.
+    - Share movement driven purely by an acquisition or a divestiture: that is a portfolio
+      change, not competitive gain or loss, unless a competitive effect is stated.
+    - M&A or financing news with no share implication, and macroeconomic commentary.
+
+    When in doubt, classify as IRRELEVANT. Be strict — a weak or vague signal is not a signal.
+universe_csv: input/universe_R1K_PiT.csv
+search:
+  start_date: '2016-01-01'
+  end_date: '2026-10-01'
+  combined_category:
+    mode: INCLUDE
+    values:
+    - news_premium
+    - transcripts
+  chunk_percentage: 0.5
+  min_entities_per_basket: 10
+  min_period_days: 90
+  requests_per_minute: 200
+  search_max_workers: 40
+  transcript_source_names:
+  - Factset Transcripts
+  - Quartr Transcripts
+  - Quartr Presentation Materials
+seeds:
+  statements:
+    positive:
+    - Company gained share in its core market at the expense of competitors
+    - Firm is taking wallet share from incumbents through a differentiated offering
+    - Win rates against competitors improved meaningfully this period
+    - Customer acquisition outpaced the overall market growth rate
+    - Management cited evidence of competitor customers switching to their platform
+    - The business held its share even as rivals launched competing products
+    - Management pointed to a strengthening competitive position
+    - Share gains came without any step-up in promotional spending
+    - New entrants have failed to take any meaningful share from the business
+    - Organization is gaining share against private-label alternatives
+    - The firm has won additional shelf space and channel presence
+    - Enterprise is gaining share in the regions it has targeted
+    - Share gains are concentrated in the fastest-growing segment of the market
+    - Share gains are coming from product strength rather than lower prices
+    - Acquisitions have consolidated the firm position and lifted its share
+    - Added capacity lets the corporation serve demand rivals must turn away
+    - The company retained its major contracts at renewal and added new ones
+    - Distribution partners are prioritizing the company products over rival offerings
+    - The brand is entering more purchase decisions than it used to
+    - The firm is capturing more than its share of new demand entering the market
+    - Business has moved into the leading position in its category
+    - Share has been stable or rising for several periods in a row
+    - A competitor exit left volume the firm is now absorbing
+    - Organization is growing share and profitability at the same time
+    - The firm is defending its installed base against competitive displacement
+    - Customers are consolidating more of their spend with the company
+    - Firm gained share through the downturn while weaker rivals retrenched
+    - The company technology is displacing the incumbent approach across the market
+    - An expanded sales force is reaching accounts the business never covered before
+    - A broader customer base has reduced reliance on any single large account
+    negative:
+    - Company lost ground to competitors in its primary end market
+    - Incumbents are taking back wallet share as the firm offering loses its edge
+    - Win rates against competitors deteriorated meaningfully this period
+    - Customer acquisition is falling behind the overall market growth rate
+    - Customer losses to alternatives accelerated this quarter
+    - Firm ceded share as rivals launched more competitive products
+    - Management acknowledged erosion of the company competitive position
+    - Market share declined despite significant promotional spending
+    - New entrants are taking share faster than the business can respond
+    - Private-label alternatives are steadily taking share from the organization
+    - The firm is losing shelf space and channel presence to rivals
+    - Enterprise is losing share in the regions that matter most to it
+    - The remaining share sits in the slowest-growing segment of the market
+    - The only way the business holds share is by underpricing rivals
+    - Rival consolidation has created a larger competitor that is squeezing the firm
+    - Capacity limits force the corporation to turn away demand rivals will serve
+    - The company lost major contracts at renewal to competing bidders
+    - Distribution partners are prioritizing rival offerings over the company products
+    - The brand is dropping out of purchase consideration altogether
+    - The firm is capturing less than its share of new demand entering the market
+    - Business has slipped out of the leading position in its category
+    - Share has declined for several consecutive periods
+    - The firm has retreated from markets where it can no longer compete
+    - Organization is buying share at the expense of profitability
+    - Competitors are steadily displacing the firm inside its own installed base
+    - Customers are splitting spend across suppliers and shrinking the company slice
+    - Firm lost share through the downturn while stronger rivals pressed ahead
+    - A new technology is displacing the company approach across the market
+    - Sales force cuts have left accounts uncovered for rivals to pick up
+    - The loss of a single large account took a visible bite out of the firm position
+extraction_embeddings:
+  embed_model: nemotron-1b
+  embed_block: 64000

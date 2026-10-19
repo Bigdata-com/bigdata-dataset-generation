@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv*/
+*.egg-info/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Secrets
+.env
+*/.env
+**/.env
+
+# Run outputs and caches (data, not source -- produced by running the pipeline)
+output/
+models/
+prices_cache/
+
+# The reference run's measured results. The notebook used to read these in its closing
+# sections; those sections are gone, so nothing opens them any more. Named one by one rather
+# than as `input/*.json`, so a file that IS read does not disappear silently later.
+input/robustness.json
+input/coverage_ic.json
+input/smoothing.json
+
+# The running log of this work, not part of the package
+WORKLOG.md
+
+# OS
+.DS_Store

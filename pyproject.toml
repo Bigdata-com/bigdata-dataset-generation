@@ -1,0 +1,56 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bigdata-dataset-generation"
+version = "0.1.0"
+description = "One theme, end to end: retrieval and extraction, teacher labelling and distillation, signal and backtest"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "pyarrow>=14.0",
+    "requests>=2.31",
+    "pyyaml>=6.0",
+    "tqdm>=4.66",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+# Part 1: the search, and the encoder that ranks what it retrieves against your seeds.
+# The encoder runs on this machine's cards, so this extra does load a model.
+#
+# torch is deliberately not listed. sentence-transformers depends on it, so pip resolves one
+# either way; what the omission does is leave an EXISTING torch alone, which matters on a box
+# with a vendor build. Read what pip says: `Uninstalling torch-...` means it just replaced one.
+retrieval = [
+    "bigdata-client>=2.0",
+    "bigdata-smart-batching>=1.4",   # plan_search, execute_search, dedup
+    "sentence-transformers>=3.0",
+    "transformers>=4.44",
+    "accelerate>=0.33",
+    "einops",                        # the NVIDIA repos need it for their remote code
+    "matplotlib>=3.8",
+]
+# Part 2 pulls the two model snapshots. `huggingface_hub` is what provides the `hf` command,
+# and it used to arrive as a transitive dependency of torch -- so removing torch removed the
+# downloader with it, and the notebook's model cell failed with nothing saying why.
+models = ["huggingface-hub>=0.24"]
+# Parts 3 and 4: prices come from the cache you provide, so only the charts need anything.
+backtest = ["matplotlib>=3.8"]
+# What the IDE needs to run the walkthrough on this venv: ipykernel runs the cells, and
+# matplotlib draws the charts.
+notebook = ["ipykernel>=6.29", "matplotlib>=3.8"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+distill = "distill.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/distill/distill", "src/backtesting/simple_backtest"]
+
+[tool.pytest.ini_options]
+testpaths = ["src/distill/tests"]
+addopts = "-q"

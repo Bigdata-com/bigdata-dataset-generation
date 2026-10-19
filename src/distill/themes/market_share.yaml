@@ -1,0 +1,51 @@
+id: market_share
+title: market share position
+
+classes:
+  gainer: 1
+  loser: -1
+  irrelevant:
+
+body: |
+  WHAT IS MARKET SHARE POSITION?
+
+  Market share position reflects how much of its market a company holds relative to its
+  competitors, and which way that is moving. A company gaining share is winning business its
+  competitors used to have, or growing faster than its market. A company losing share is
+  handing business to competitors, or growing slower than its market.
+
+  Think of it as a question: is this company taking business from its competitors, or giving
+  business away to them?
+
+  GAINER: the excerpt suggests the COMPANY is gaining ground on its competitors. It won share,
+  volume, accounts, contracts, shelf space, or channel priority; win rates improved; customers
+  moved to it from an alternative; it grew faster than its market, moved up in its category, or
+  absorbed volume a rival gave up. The gain is the COMPANY's own, and it is measured against
+  competitors or against the market's growth — not against its own past absolute size.
+
+  LOSER: the excerpt suggests the COMPANY is losing ground to its competitors. It lost share,
+  volume, accounts, contracts, shelf space, or channel priority; win rates deteriorated;
+  customers moved to an alternative; it grew slower than its market, slipped out of the leading
+  position, or withdrew from a market it could no longer compete in.
+
+  IRRELEVANT: the excerpt does not meaningfully speak to the COMPANY's own competitive
+  position. These are the near-misses that specifically do NOT count:
+
+  - Not about the COMPANY's own position: analyst price targets, ratings or stock moves;
+    insider transactions; a different company is the real subject and the COMPANY is only
+    named as customer, competitor, channel or example; earnings-call boilerplate (analyst
+    intros, operator handoffs, greetings); a question that states no fact.
+  - Absolute growth with no competitive reference: revenue, earnings, customer or volume
+    growth not compared to competitors or to the market's own growth. GROWING IS NOT GAINING
+    SHARE.
+  - Total-market or industry statements ("the category grew 8%", "demand is strong") with
+    nothing said about the COMPANY's own slice of it.
+  - Capability, intent, plans, targets or guidance only ("we aim to be number one", "we are
+    investing to win share") with no realized outcome.
+  - Inputs mistaken for outcomes: a new product, plant, hire, partnership or campaign
+    announced with no stated competitive result.
+  - Share movement driven purely by an acquisition or a divestiture: that is a portfolio
+    change, not competitive gain or loss, unless a competitive effect is stated.
+  - M&A or financing news with no share implication, and macroeconomic commentary.
+
+  When in doubt, classify as IRRELEVANT. Be strict — a weak or vague signal is not a signal.

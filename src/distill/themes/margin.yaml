@@ -1,0 +1,61 @@
+id: margin
+title: margin trajectory
+
+classes:
+  winner: 1
+  loser: -1
+  irrelevant:
+
+body: |
+  WHAT IS MARGIN TRAJECTORY?
+
+  A margin is a spread, not an amount: what a company keeps out of every euro it sells, once
+  the cost of selling it is paid. Margin trajectory is which way that spread is moving. It
+  widens when the two sides move apart in the company's favour — price ahead of cost, revenue
+  ahead of the spending needed to produce it, a mix tilting toward the more profitable end of
+  the business. It narrows when they move apart against it.
+
+  Think of it as a question: is the gap between what this company charges and what it spends
+  getting wider, or narrower?
+
+  The word "margin" need not appear, and often it does not. Any statement putting revenue and
+  cost in RELATION to one another is about margin: costs growing faster than sales, a price
+  rise that more than covers an input, a plant running fuller so each unit carries less
+  overhead, discounts given away to hold volume. The corollary is the trap: a movement in ONE
+  quantity is not a signal. A company can grow revenue, cut a cost or raise a price and still
+  end up with a narrower spread. What matters is which side moved further.
+
+  WINNER: the excerpt suggests the COMPANY's own spread is widening. Price, or the value of
+  what is sold, moved ahead of what it costs to deliver; volume grew into fixed costs already
+  being paid; the mix moved toward the more profitable products, customers or regions; a cost
+  the business carried is smaller or better contained. The improvement is the COMPANY's own and
+  it is the UNDERLYING one — how the business now runs, not an accounting item or a one-off.
+
+  LOSER: the excerpt suggests the COMPANY's own spread is narrowing. What it costs to deliver
+  moved ahead of what can be charged; volume fell away from fixed costs that stayed; the mix
+  moved toward the thinner end; a cost landed that it cannot pass on; it gave away price to
+  hold demand. Read a reported improvement the excerpt says rests on one-off items, or expects
+  to reverse, as a LOSER: the underlying spread is worse than the printed one.
+
+  IRRELEVANT: the excerpt does not meaningfully speak to the direction of the COMPANY's own
+  spread. These are the near-misses that specifically do NOT count:
+
+  - Not about the COMPANY's own economics: analyst estimates, price targets, ratings or stock
+    moves; insider transactions; a different company is the real subject and the COMPANY is
+    only named as customer, supplier, competitor or example; earnings-call boilerplate; a
+    question that states no fact.
+  - One side of the spread with nothing said or implied about the other: revenue, earnings or
+    volume growth alone; a cost or a price moving alone. GROWING IS NOT EXPANDING MARGINS.
+  - A margin LEVEL with no direction: "margins are around 30%", "a high-margin business". The
+    axis is the trajectory, not the altitude.
+  - Intent, plans or long-dated targets with no realized outcome ("we are investing in
+    efficiency"). A raised or cut OUTLOOK is an act and counts; an aspiration does not.
+  - Inputs mistaken for outcomes: a cost programme, plant or restructuring announced, with no
+    stated effect on the spread.
+  - Industry or peer margins ("the sector is under margin pressure") with nothing about the
+    COMPANY's own.
+  - A spread that moved only because the portfolio did — an acquisition or a divestiture —
+    unless an effect on the underlying business is stated.
+  - M&A or financing news with no margin implication, and macroeconomic commentary.
+
+  When in doubt, classify as IRRELEVANT. Be strict — a weak or vague signal is not a signal.

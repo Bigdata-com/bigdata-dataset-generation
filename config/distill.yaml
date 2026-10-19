@@ -1,0 +1,80 @@
+input:
+  similarity_parquet: similarity/combinations_with_similarity.parquet
+  source_parquet: null
+  reference_label_column: null
+
+sentence:
+  # The cosine a sentence has to clear to be worth sending, read on the scale of the encoder
+  # that scored it (nemotron-1b), so this moves with `embed_model`.
+  similarity_threshold: 0.1371
+
+sample:
+  fraction_per_bin: 0.1
+
+teacher:
+  url: http://localhost:8107/v1/chat/completions
+  model: super120b
+  workers: 192
+  serve:
+    container: tx-teacher
+    model_path: nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4
+    revision: ff433f5493e25d631c9f12b5d55c674229923d02
+    port: 8107
+    served_model_name: super120b
+    args:
+    - --data-parallel-size
+    - '2'
+    - --max-model-len
+    - '12288'
+    - --max-num-seqs
+    - '96'
+    - --max-num-batched-tokens
+    - '32768'
+    - --kv-cache-dtype
+    - fp8
+    - --mamba-ssm-cache-dtype
+    - float16
+    - --gpu-memory-utilization
+    - '0.92'
+    env:
+      VLLM_USE_DEEP_GEMM: '0'
+      HF_HUB_CACHE: /models
+    volumes:
+    - models:/models
+
+student:
+  url: http://localhost:8000/v1/chat/completions
+  model: student
+  workers: 384
+  max_output_tokens: 250
+  timeout: 120
+  early_stop: true
+  serve:
+    container: tx-student
+    served_model_name: student
+    args:
+    - --data-parallel-size
+    - '2'
+    - --max-model-len
+    - '4096'
+    - --max-num-seqs
+    - '512'
+    - --max-num-batched-tokens
+    - '32768'
+    - --gpu-memory-utilization
+    - '0.90'
+    env:
+      VLLM_USE_DEEP_GEMM: '0'
+      HF_HUB_CACHE: /models
+    volumes:
+    # A colon-less entry is mounted at its own absolute path. The repository has to be:
+    # the student is served by `--model` and `--chat-template` as HOST paths.
+    - models:/models
+    - .
+
+training:
+  base_model: nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16
+  base_revision: dfaf35de3e30f1867dd8dbc38a7fc9fb52d3914f
+  gpus: ddp
+  container: tx-train-dp
+  gradient_checkpointing: false

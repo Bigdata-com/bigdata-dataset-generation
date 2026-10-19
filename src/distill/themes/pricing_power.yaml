@@ -1,0 +1,42 @@
+id: pricing_power
+title: pricing power
+owner: ravenpack
+version: '2'
+
+# name -> signal sign. No sign means this is the abstain class.
+# The three things prose cannot carry: what the parser may accept, where the sentence-level
+# walk stops, and what the backtest multiplies by.
+classes:
+  winner: 1
+  loser: -1
+  irrelevant:
+
+# Everything below is written by the user and sent verbatim. The framework adds the header,
+# the transcript speaker rule, and the JSON contract. See distill/distill/prompt_guidelines.md.
+body: |
+  WHAT IS PRICING POWER?
+
+  Pricing power reflects how much control a company has over the prices it charges.
+  A company with strong pricing power can set or raise prices without losing customers —
+  because its product is differentiated, essential, or has no good substitute.
+  A company with weak pricing power is forced to accept the prices the market dictates —
+  it cannot raise prices without losing volume, or must discount to compete.
+
+  Think of it as a question: who has the upper hand — the company or its customers?
+
+  WINNER: the excerpt suggests the company has the upper hand on pricing.
+  The company sets prices, raises them, passes through cost increases, or commands a premium.
+  Customers accept it. Margins hold or expand. Pricing is a source of strength.
+
+  LOSER: the excerpt suggests the market has the upper hand over the company.
+  The company cannot raise prices, must cut or discount, loses share to cheaper alternatives,
+  or sees pricing as a headwind. Margins are under pressure because of pricing dynamics.
+
+  IRRELEVANT: the excerpt does not meaningfully speak to the target company's pricing power.
+  This includes: insider transactions, stock price movements, analyst upgrades/downgrades
+  without pricing content, M&A news, macroeconomic commentary, or excerpts where
+  the target company is mentioned only peripherally.
+  When in doubt, classify as IRRELEVANT. Be strict — a weak or vague signal is not a signal.
+
+rationale_instruction: one sentence, specific to this excerpt and this company
+max_text_chars: 6000

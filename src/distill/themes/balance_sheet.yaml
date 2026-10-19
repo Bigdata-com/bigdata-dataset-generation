@@ -1,0 +1,69 @@
+id: balance_sheet
+title: balance sheet strength
+
+classes:
+  winner: 1
+  loser: -1
+  irrelevant:
+
+body: |
+  WHAT IS BALANCE SHEET STRENGTH?
+
+  A balance sheet is a STOCK, not a flow: what a company owns, what it owes, and when what it
+  owes comes due. Strength is the capacity that stock gives it — to absorb a shock without
+  being forced into anything, and to act on an opportunity without asking anyone's permission.
+  Weakness is when the obligations decide instead: what the company can do next is set by what
+  it owes rather than by what it wants.
+
+  Think of it as a question: if this company had a bad year, would it get through on its own
+  resources, or would it have to be rescued, sell something, or stop doing something?
+
+  The words "balance sheet" need not appear, and usually they do not. Any statement putting
+  what a company OWES against what it OWNS, or against WHEN the obligation falls due, is about
+  this: cash that covers the maturities or does not, assets already pledged to someone else, a
+  pension claim on future cash, receivables that are ageing. Two traps follow. An amount alone
+  is not a signal — debt rising is not weakness if the resources rose further, and cash is not
+  strength if all of it is owed within the year. And a FLOW is not this theme: revenue,
+  earnings and margins belong to other axes, and only count here when the excerpt ties them to
+  the stock, as free cash flow paying leverage down does.
+
+  WINNER: the excerpt suggests the COMPANY has capacity. Resources cover the obligations with
+  room left; the maturities are far off or already dealt with; the assets are real, unpledged
+  and carried at values that hold; working capital releases cash rather than swallowing it; a
+  lender, a rating agency or a stress test has confirmed it from outside. Or the capacity is
+  shown by an ACT the company took freely — funding an acquisition from its own resources,
+  investing while competitors could not, holding the dividend through a weak period.
+
+  LOSER: the excerpt suggests the obligations are deciding. What is owed exceeds or crowds what
+  is owned; a maturity is coming that the cash does not cover; the rating fell or the covenants
+  are tightening; the assets are pledged, impaired, illiquid or carried above what they are
+  worth; working capital keeps absorbing cash; an obligation the company cannot avoid — a
+  pension deficit, a guarantee, a lease — sits against future cash. Or the weakness is shown by
+  a FORCED act: emergency equity that diluted holders, assets sold at distressed prices,
+  investment cut or shareholder returns suspended to protect the balance sheet.
+
+  IRRELEVANT: the excerpt does not meaningfully speak to the COMPANY's own capacity. These are
+  the near-misses that specifically do NOT count:
+
+  - Not about the COMPANY's own position: analyst estimates, price targets or stock moves;
+    insider transactions; a different company is the real subject and the COMPANY is only
+    named as customer, supplier, competitor or example; earnings-call boilerplate; a question
+    that states no fact.
+  - A FLOW on its own: revenue, earnings or margin, however good or bad. EARNING IS NOT
+    SOLVENCY, and a loss is not a weak balance sheet unless the excerpt says what it did to
+    the stock.
+  - An amount with no counterpart and no timing: "the company has $2bn of debt", "cash stood
+    at $500m". A number is a fact, not a direction, until something is set against it.
+  - Ordinary financing: a routine refinancing, a bond issue or a credit line renewed on normal
+    terms. Raising debt is not weakness by itself, and repaying some is not strength.
+  - Intent, plans or targets with no realized change: "we aim to deleverage", "our priority is
+    the balance sheet". A rating action, a covenant breach or a waiver is an ACT and counts;
+    an aspiration does not.
+  - Capital allocation announced with nothing said about the capacity behind it: a buyback, a
+    dividend, a capex plan.
+  - Industry or peer leverage ("the sector is over-levered") with nothing about the COMPANY.
+  - A position that moved only because the portfolio did — an acquisition or a divestiture —
+    unless an effect on the underlying capacity is stated.
+  - M&A or macroeconomic commentary with no balance sheet implication.
+
+  When in doubt, classify as IRRELEVANT. Be strict — a weak or vague signal is not a signal.
